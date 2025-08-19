@@ -47,3 +47,37 @@ Deploy function to AWS Lambda
     cd "AWSLambdaGetBooks/src/AWSLambdaGetBooks"
     dotnet lambda deploy-function
 ```
+
+Get  Books
+```
+    dotnet lambda invoke-function GetBooks --payload "{}"   
+```
+```
+[
+  {
+    "title": "Cuentos para pensar",
+    "author": "Jorge Bucay",
+    "published": "1997-03-01T10:15:30.1234567Z"
+  },
+  {
+    "title": "La sombra del viento",
+    "author": "Carlos Ruiz Zafón",
+    "published": "2001-04-12T08:45:00.9876543Z"
+  },
+  {
+    "title": "Rayuela",
+    "author": "Julio Cortázar",
+    "published": "1963-06-28T14:20:10.4567890Z"
+  },
+  {
+    "title": "Los detectives salvajes",
+    "author": "Roberto Bolaño",
+    "published": "1998-02-01T17:00:00.0000000Z"
+  },
+  {
+    "title": "El amor en los tiempos del cólera",
+    "author": "Gabriel García Márquez",
+    "published": "1985-09-05T22:10:05.7654321Z"
+  }
+]
+```
